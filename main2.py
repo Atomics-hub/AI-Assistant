@@ -1,4 +1,4 @@
-# This is a script for a bot
+# This is a script for a text to speech bot that uses openai's chatgpt
 
 
 # Imports
@@ -12,7 +12,7 @@ from pocketsphinx import LiveSpeech
 
 
 listening = False
-wake_word = 'Hey'
+wake_word = 'Hello'
 shutoff_word = 'That is all'
 last_interaction_time = time.time()
 api_key = 'YOUR API KEY'
@@ -22,6 +22,7 @@ rec = sr.Recognizer()
 messages = []
 
 
+# Function to get messages to gpt
 def talk_to_gpt(message):
     model = 'gpt-3.5-turbo'
     response = openai.ChatCompletion.create(model=model, messages=message, max_tokens=500, n=1, stop=None, temperature=0.8)
@@ -54,6 +55,7 @@ def reset_conversation():
     return []
 
 
+# To keep the conversation going
 first_interaction = True
 while True:
     text = get_text()
