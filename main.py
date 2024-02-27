@@ -30,7 +30,7 @@ def talk_to_gpt(message):
 
 
 # Function to speak with the specified voice
-def speak(command, voice_id="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0"):
+def speak(command, voice_id="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0"): # Change the voice id if you want a differnt voice
     engine = pyttsx3.init()
 
     # Set the selected voice by voice ID
