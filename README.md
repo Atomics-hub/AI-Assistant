@@ -1,5 +1,4 @@
 # AI-Assistant
-Code For Smart Mirror AI Assistant
 
 IF YOU ARE USING RASPBERRY PI:
 - Use main2.py
